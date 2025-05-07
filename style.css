@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+
+}
+
+.flex {
+    display:flex;
+}
+
+.header {
+    text-align:center;
+    padding: 20px;
+    background-color:#444444;
+
+}
+
+.center {
+    justify-content: center;
+}
+
+.title{
+    margin:0;
+    color:#aaaaaa;
+}
+
+.subtitle {
+    margin: 5px 0 0;
+    color: #fff
+}
+
+.score {
+    margin: 0 50px 0;
+    
+
+}
+
+.scorebox {
+    background-color: #444444;
+    color: #aaaaaa
+}
+
+button{
+    margin: 20px 50px 0;
+    width: 10em;
+    height: 2em;
+}

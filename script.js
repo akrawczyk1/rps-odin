@@ -6,71 +6,72 @@ function getComputerChoice() {
 
 }
 
-// returns the first lower case letter of choice
-function sanitizeChoice(choice) {
-    choice = choice.toLowerCase();
+// // returns the first lower case letter of choice
+// function sanitizeChoice(choice) {
+//     choice = choice.toLowerCase();
 
-    return choice.slice(0, 1);
-}
+//     return choice.slice(0, 1);
+// }
 
-function unsanitizeChoice(choice){
-    switch (choice){
-        case "r": return "Rock";
-        case "p": return "Paper";
-        case "s": return "Scissors";
-        default: throw new Error("Attempted to unsanitize an invalid choice!");
-    }
-}
+// function unsanitizeChoice(choice){
+//     switch (choice){
+//         case "r": return "Rock";
+//         case "p": return "Paper";
+//         case "s": return "Scissors";
+//         default: throw new Error("Attempted to unsanitize an invalid choice!");
+//     }
+// }
 
-function getHumanChoice() {
-    let choice = prompt("Choose \"rock\", \"paper\", or \"scissors\"! Or type \"q\" to quit! \n");
+// function getHumanChoice() {
+//     let choice = prompt("Choose \"rock\", \"paper\", or \"scissors\"! Or type \"q\" to quit! \n");
     
-    choice = sanitizeChoice(choice);
+//     choice = sanitizeChoice(choice);
 
-    switch (choice){
-        case "r":
-            console.log("You chose rock!");
-            break;
-        case "p":
-            console.log("You chose paper!");
-            break;
-        case "s":
-            console.log("You chose scissors!");
-            break;
-        case "q":
-            break;
-        default:
-            throw new Error("Player made an invalid choice!");
+//     switch (choice){
+//         case "r":
+//             console.log("You chose rock!");
+//             break;
+//         case "p":
+//             console.log("You chose paper!");
+//             break;
+//         case "s":
+//             console.log("You chose scissors!");
+//             break;
+//         case "q":
+//             break;
+//         default:
+//             throw new Error("Player made an invalid choice!");
 
-    }
+//     }
 
-    return choice;
-}
+//     return choice;
+// }
 
 // Encodes "rock" to 0, "paper" to 1, and "scissors" to 2.
-function encodeChoice(choice){
-    if (choice === 0 || choice === 1 || choice === 2){
-        return choice;
-    }
+// function encodeChoice(choice){
+//     if (choice === 0 || choice === 1 || choice === 2){
+//         return choice;
+//     }
 
-    choice = sanitizeChoice(choice);
-    switch(choice){
-        case "r": return 0;
-        case "p": return 1;
-        case "s": return 2;
-        case "q": return -1;
-        default: throw new Error("An invalid choice was attempted to be encoded!");
-    }
-}
+//     choice = sanitizeChoice(choice);
 
-function unencodeChoice(choice){
-    switch(choice){
-        case 0: return "Rock";
-        case 1: return "Paper";
-        case 2: return "Scissors";
-        default: throw new Error("Attempted to unencode invalid choice!");
-    }
-}
+//     switch(choice){
+//         case "r": return 0;
+//         case "p": return 1;
+//         case "s": return 2;
+//         case "q": return -1;
+//         default: throw new Error("An invalid choice was attempted to be encoded!");
+//     }
+// }
+
+// function unencodeChoice(choice){
+//     switch(choice){
+//         case 0: return "Rock";
+//         case 1: return "Paper";
+//         case 2: return "Scissors";
+//         default: throw new Error("Attempted to unencode invalid choice!");
+//     }
+// }
 
 function playRound(playerChoice, cpuChoice){
     
